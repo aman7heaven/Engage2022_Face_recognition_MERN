@@ -1,17 +1,26 @@
 //shows students attendance
 //get/dashboard
-const getAttendance= (req,res) =>{
- res.send('show student attendance')
+
+const Home=(req,res)=>{
+res.send('home page')
 }
 
-const setAttendance= (req,res)=>{
-    console.log();
+const MarkAttendance=(req,res)=>{
+res.send('Attendance marked')
 }
+
+const Dashboard= (req,res) =>{
+ res.send('admin logs in here')
+}
+
 const DeleteAttendance= (req,res) =>{
     res.send(`Delete students Attendance ${req.params.id}`)
    }
 
+
 module.exports={
-    getAttendance,
+    Home,
+    MarkAttendance,
+    Dashboard,
     DeleteAttendance,
 }

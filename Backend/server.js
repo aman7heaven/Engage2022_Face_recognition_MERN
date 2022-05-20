@@ -4,5 +4,5 @@ const port=process.env.PORT || 5000
 
 const app=express()
 
-app.use('/dashboard',require('./routes/studentroutes'))
+app.use('/Home',require('./routes/studentroutes'))
 app.listen(port, () =>console.log(`server started on port ${port}`))

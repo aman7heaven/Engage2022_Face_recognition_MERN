@@ -1,14 +1,14 @@
 const express = require('express')
 const router=express.Router()
-const {getAttendance,DeleteAttendance}=require('../controllers/StudentControllers')
+const {Home,MarkAttendance,Dashboard,DeleteAttendance}=require('../controllers/StudentControllers')
 
-router.get('/', getAttendance)
+router.get('/',Home)
+
+router.get('/Dashboard', Dashboard)
+
+router.get('/MarkAttendance',MarkAttendance)
  
-router.delete('/:id', DeleteAttendance)
-
-
-
-
+router.delete('/Dashboard/:id', DeleteAttendance)
 
 
 module.exports=router
