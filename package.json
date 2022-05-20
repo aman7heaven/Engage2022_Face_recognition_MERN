@@ -1,14 +1,22 @@
 {
   "name": "face_recog_mern",
   "version": "1.0.0",
-  "description": "Face rcognition + attendance system webapp using MERN stack",
+  "description": "project",
   "main": "server.js",
   "scripts": {
     "start": "node backend/server.js",
     "server": "nodemon backend/server.js"
   },
-  "author": "Aman Saxena",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aman7heaven/Face_recognition_attendance_MERN.git"
+  },
+  "author": "aman",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/aman7heaven/Face_recognition_attendance_MERN/issues"
+  },
+  "homepage": "https://github.com/aman7heaven/Face_recognition_attendance_MERN#readme",
   "dependencies": {
     "colors": "^1.4.0",
     "dotenv": "^16.0.1",

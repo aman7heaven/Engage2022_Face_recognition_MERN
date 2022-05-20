@@ -1,3 +1,4 @@
+
 from flask import Flask,render_template,Response
 import cv2
 
@@ -18,7 +19,17 @@ def generate_frames():
             import numpy as np
             import face_recognition
             import os
-           
+            from datetime import datetime
+            from datetime import date
+            from datetime import time
+            import pymongo
+            #import dnspython
+            from pymongo import MongoClient
+            myClient=pymongo.MongoClient("mongodb+srv://aman7heaven:engage2022@cluster0.buqua.mongodb.net/?retryWrites=true&w=majority")
+            #Creating Database in mongoDB
+            myDB=myClient["Students_data"]
+            myCol=myDB["Attendance_record"]
+
             # from PIL import ImageGrab
 
             path = 'ImagesAttendance'
@@ -41,6 +52,26 @@ def generate_frames():
                     encodeList.append(encode)
                 return encodeList
             
+            def markAttendance(name):
+                
+                  now =datetime.now()
+                  today_date=now.strftime("%x")
+                  dtstring=now.strftime('%H:%M:%S')
+                  student_data={'Name': name ,'Date': today_date , 'Time': dtstring , 'Status': 'Present' }
+                  if myCol.find_one({'Name':name}):
+                    print("already exists")
+                  else:
+                   myCol.insert_one(student_data)
+                   print('done')
+                  
+                 #if myCol.find({'Name':name}):
+                    #cv2.destroyAllWindows()
+
+                 
+                
+              
+
+
             #### FOR CAPTURING SCREEN RATHER THAN WEBCAM
             # def captureScreen(bbox=(300,300,690+300,530+300)):
             #     capScr = np.array(ImageGrab.grab(bbox))
@@ -75,6 +106,11 @@ def generate_frames():
                         cv2.rectangle(img,(x1,y1),(x2,y2),(0,255,0),2)
                         cv2.rectangle(img,(x1,y2-35),(x2,y2),(0,255,0),cv2.FILLED)
                         cv2.putText(img,name,(x1+6,y2-6),cv2.FONT_HERSHEY_COMPLEX,1,(255,255,255),2)
+                        markAttendance(name)
+                        
+                
+                        
+
                     #cv2.imshow('Webcam',img)
                     #cv2.waitKey(1)
                 #nparr = np.fromstring(frame, np.uint8)
