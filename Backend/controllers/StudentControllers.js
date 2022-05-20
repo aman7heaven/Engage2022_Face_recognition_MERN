@@ -1,21 +1,34 @@
-//shows students attendance
-//get/dashboard
+const express=require('express')
+const asyncHandler=require('express-async-handler')
+const StudentSchema=require('../model/attendanceModel')
+const db=require('../config/db')
+const { collection } = require('../model/attendanceModel')
+const res = require('express/lib/response')
 
-const Home=(req,res)=>{
+
+const Home=asyncHandler(async(req,res)=>{
 res.send('home page')
-}
+})
 
-const MarkAttendance=(req,res)=>{
+const MarkAttendance=asyncHandler(async(req,res)=>{
 res.send('Attendance marked')
-}
+})
 
-const Dashboard= (req,res) =>{
- res.send('admin logs in here')
-}
+const Dashboard= asyncHandler(async(req,res) =>{
+   
+   StudentSchema.find({},function(Attendance_record){
+       
+     res.json(Attendance_record)
 
-const DeleteAttendance= (req,res) =>{
+       })
+    
+})
+
+const DeleteAttendance= asyncHandler(async(req,res) =>{
     res.send(`Delete students Attendance ${req.params.id}`)
-   }
+   })
+
+
 
 
 module.exports={
@@ -24,3 +37,4 @@ module.exports={
     Dashboard,
     DeleteAttendance,
 }
+
