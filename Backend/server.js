@@ -13,7 +13,7 @@ app.use(express.urlencoded({extended:false}))
 
 app.use('/Home',require('./routes/studentroutes'))
 
-app.listen(port, () =>console.log(`server started on port ${port}`))
+app.listen(port,() =>console.log(`server started on port ${port}`))
 
 
 

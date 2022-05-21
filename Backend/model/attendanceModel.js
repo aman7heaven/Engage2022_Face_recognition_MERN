@@ -2,13 +2,13 @@ const mongoose=require('mongoose')
 const MongoClient=require('mongodb').MongoClient
 
 
-const AttendanceSchema={
+const AttendanceSchema=mongoose.Schema({
 
     Name:String,
     Date:String,
     Time:String,
     Status:String
 
-}
+},{db:'Students_data'})
 
-module.exports=mongoose.model('AttendanceSchema',AttendanceSchema)
+module.exports=mongoose.model('Schema',AttendanceSchema)

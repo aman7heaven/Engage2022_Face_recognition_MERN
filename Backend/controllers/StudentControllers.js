@@ -1,9 +1,20 @@
-const express=require('express')
-const asyncHandler=require('express-async-handler')
-const StudentSchema=require('../model/attendanceModel')
-const db=require('../config/db')
-const { collection } = require('../model/attendanceModel')
-const res = require('express/lib/response')
+
+const asyncHandler=require('express-async-handler')  
+const { append } = require('express/lib/response')
+//const StudentSchema=require('../model/attendanceModel')
+
+const mongoose=require('mongoose')
+var AttendanceSchema=new mongoose.Schema({
+
+    Name:String,
+    Date:String,
+    Time:String,
+    Status:String
+
+},{collection:'Attendance_record'});
+
+//module.exports=mongoose.model('Schema',AttendanceSchema)
+const Schema=mongoose.model('Schema',AttendanceSchema)
 
 
 const Home=asyncHandler(async(req,res)=>{
@@ -16,19 +27,18 @@ res.send('Attendance marked')
 
 const Dashboard= asyncHandler(async(req,res) =>{
    
-   StudentSchema.find({},function(Attendance_record){
-       
-     res.json(Attendance_record)
+    Schema.find({},function(err,Attendance_record){
+      res.send(Attendance_record)
+    })
+    
 
-       })
+     
     
 })
 
 const DeleteAttendance= asyncHandler(async(req,res) =>{
     res.send(`Delete students Attendance ${req.params.id}`)
    })
-
-
 
 
 module.exports={
