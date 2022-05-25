@@ -1,0 +1,234 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+body{
+  background:var(--color-bg)
+}
+
+/*css for registration form*/
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* > * {
+    font-family: "Poppins", cursive;
+    margin: 0;
+}
+
+
+.App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+section{
+  background-color: white;
+  height: 100vh;
+}
+.register{
+  max-width: 998px;
+  width: 100vw;
+  display:flex;
+  border: 1px solid #e9ecef;
+  border-radius: 5px;
+  /* box-shadow: 1px 3px 10px #e9ecef; */
+ background-color: white;
+}
+
+.register span{
+  color: #adb5bd;
+}
+
+#form{
+  max-width: 320px;
+  width: 100vw;
+  margin: 2em auto;
+}
+
+#form >  input, .btn{
+  border: 1px solid #e9ecef;
+  padding: .9em 1em;
+}
+
+#form > input:focus{
+  outline: none;
+}
+
+#form > .btn{
+  background-color: #003049;
+  color: #e9ecef;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.flex{
+  display: flex;
+  gap: 1em;
+}
+
+.flex-col{
+  flex-direction: column;
+}
+
+.register .col-1{
+  margin: auto;
+  padding: 3em 0;
+  width:25%;
+}
+
+.register .col-2 img{
+  width: 480px;
+  height: 100%;
+  object-fit: cover;
+  align-self: flex-end;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: none;
+}
+
+@media screen and (min-width: 860px)  {
+  .register .col-2 img{
+    display: initial;
+  }
+}
+
+/*login from css*/
+
+.main {
+  text-align: center;
+  justify-content: center;
+  display: flex; 
+  padding-top: 90px;
+  padding-bottom: 90px;
+  background-image: url("./assets/girl2.png");
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-attachment: fixed;
+ /* background-color: #e1e3eb;*/
+}
+.sub-main {
+  display: flex;
+  justify-content: center;
+  height: 550px;
+  width: 35%;
+  /*box-shadow: 1px 1px 15px 1px #f1ff5c;*/
+  padding-top: 30px;
+  border-radius: 60px; 
+  background-color: #0016205c;
+}
+.imgs {
+    padding-top: 20px;
+    justify-content: center;
+    display: flex;
+  }
+.container-image {
+  background-color: rgb(223, 221, 221); 
+  border-radius: 150px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  height: 115px;
+  width: 115px;
+}
+.profile {
+  height: 100px;
+  width: 100px;
+  border-radius: 130px;
+} 
+
+input{
+    width: 300px;
+    height: 50px;
+    border-radius: 60px;
+    box-shadow: inset 0px 0px 25px 0px #888;
+    border: none;
+    outline: none;
+    background-color: #fff;
+}
+
+.email{
+    height: 25px;
+    width: 25px;
+    position: absolute;
+    padding: 14px 0 0 25px;
+}
+
+.name{
+    padding-left: 70px;
+    font-size: 20px;
+}
+.second-input{
+    padding-top: 20px;
+}
+
+button{
+    width: 380px;
+    height: 50px;
+    border-radius: 60px;
+    background-color: #b103fc;
+    color: white;
+    font-size: 25px;
+    border: none;
+}
+
+
+.login-button{
+    padding-top: 25px;
+
+}
+
+.link{
+    font-size: 25px;
+    font-weight: 400;
+}
+ a{
+     color: white;
+ }
+
+ .loginpagetext{
+   color:white;
+ }
+ .oroption{
+   color:white;
+ }
+
+ .loginfooter{
+  padding:10px;
+  margin:10px;
+ }
