@@ -1,3 +1,4 @@
+
 .App {
   text-align: center;
 }
@@ -232,3 +233,112 @@ button{
   padding:10px;
   margin:10px;
  }
+ .Homeimg{
+height: 630px;
+width:auto;
+
+ }
+ .homeai{
+
+display:flex;
+height: 100%;
+width:100%;
+align-items: center;
+justify-content: space-around;
+
+ }
+
+.Hometext{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: 1;
+  
+  padding-top: 10px;
+  color:red;
+
+}
+
+#yo{
+  font-size: 80px;
+  font-family: 'Anton', sans-serif;
+}
+
+#let{
+  font-family: 'Anton', sans-serif;
+  color:white;
+}
+
+#maintext{
+ 
+  color:white;
+  font-size:15px;
+}
+
+#brands{
+  padding-left: 30px;
+  display:flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#AMS{
+  color:white;
+}
+
+#attendance{
+ /* display: flex;
+  flex-direction: column;
+
+  padding: 2rem;
+  background: var(--color-footer);*/
+ height:600px;
+ width: auto;
+ margin-left:100px;
+ margin-right: 100px;
+ margin-top: 20px;
+  
+
+  /* ff 3.6+ */
+  background:-moz-radial-gradient(circle at 30% -100%, #042c54 25%, rgba(4, 44, 84, 1) 85%, rgba(27, 120, 222, 1) 100%);
+
+  /* safari 5.1+,chrome 10+ */
+  background:-webkit-radial-gradient(circle at 30% -100%, #042c54 25%, rgba(4, 44, 84, 1) 85%, rgba(27, 120, 222, 1) 100%);
+
+  /* opera 11.10+ */
+  background:-o-radial-gradient(circle at 30% -100%, #042c54 25%, rgba(4, 44, 84, 1) 85%, rgba(27, 120, 222, 1) 100%);
+
+  /* ie 10+ */
+  background:-ms-radial-gradient(circle at 30% -100%, #042c54 25%, rgba(4, 44, 84, 1) 85%, rgba(27, 120, 222, 1) 100%);
+
+  /* global 92%+ browsers support */
+  background:radial-gradient(circle at 30% -100%, #042c54 25%, rgba(4, 44, 84, 1) 85%, rgba(27, 120, 222, 1) 100%);
+
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+/*#imgAttendance{
+height: 100px;
+width: auto;
+padding:50px;
+}*/
+
+#attendance{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ 
+
+}
+
+#newimg{
+  height:500px;
+  width: auto;
+  padding-top: 40px;
+}
+
+.AttendanceText{
+  padding-top: auto;
+  font-size: 25px;
+  color:white;
+}
