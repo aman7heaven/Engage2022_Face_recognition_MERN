@@ -11,7 +11,7 @@ const Mark_attendance = () => {
        <br></br>
        <br></br>
        
-       <div class="AttendanceText"><p ><span>Click</span> on the given button to mark your attendance  <span><a href = "http://127.0.0.1:5000/"><button type="button" class="btn btn-dark btn-sm">Mark Attendance</button></a>
+       <div class="AttendanceText"><p ><span>Click</span> on the given button to mark your attendance  <span><a href = "http://127.0.0.1:5000/"><button type="button" class="btn btn-warning btn-sm">Mark Attendance</button></a>
 </span></p></div>
 
     </div>

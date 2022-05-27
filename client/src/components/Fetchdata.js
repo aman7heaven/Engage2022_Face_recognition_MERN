@@ -17,7 +17,7 @@ return (
     
     <>
     
-    <button className='btn btn-primary' onClick={FetchData}>Fetchdata</button>
+    <button className='btn btn-warning btn-sm' onClick={FetchData}>Fetch Attendance Records</button>
     {
 
     data.map( (value) =>(

@@ -137,7 +137,9 @@ section{
   display: flex; 
   padding-top: 90px;
   padding-bottom: 90px;
-  background-image: url("./assets/girl2.png");
+  background-image: url("./assets/final.jpg");
+  background-blend-mode: multiply;
+  background-color: rgb(102 91 91);
   background-repeat: no-repeat;
   background-size:cover;
   background-attachment: fixed;
@@ -146,7 +148,7 @@ section{
 .sub-main {
   display: flex;
   justify-content: center;
-  height: 550px;
+  height: 499px;
   width: 35%;
   /*box-shadow: 1px 1px 15px 1px #f1ff5c;*/
   padding-top: 30px;
@@ -191,7 +193,7 @@ input{
 }
 
 .name{
-    padding-left: 70px;
+    padding-left: 15px;
     font-size: 20px;
 }
 .second-input{
