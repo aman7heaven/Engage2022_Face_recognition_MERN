@@ -148,7 +148,7 @@ for the backend/server side-
 
 ## Points to remember while running this webapp
 
-1-After cloning or forking the project , separated the face-recognition folder and run it in a IDE or elsewhere.
+1-After cloning or forking the project , separate the face-recognition folder and run app.py  in a IDE or elsewhere.
   Once the server has started go to the server side of MERN folder and run-
 
   ```bash
